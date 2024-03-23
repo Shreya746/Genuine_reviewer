@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+    {% block title %}|Graphs  {% endblock %}
+
+{% block content %}
+
+  <div id="lstm">
+                          <button onclick="confusion()" class="lstm_button">Confusion matrix </button>
+                           <button onclick="classify()" class="lstm_button"> Classification report</button>
+                           <button onclick="visual()" class="lstm_button">Visualization graph</button>
+                          <br><br><br><br>
+
+                          <div id="confusion">
+<!--                      <h1 class="second-h2" >CONFUSION MATRIX  FOR RANDOM FOREST MODEL</h1>-->
+                          <br>
+                               <img class=" graphs " style="height:400px;margin-top:-40px;"  src="/static/graphs/confusion.png"  alt="">
+                      </div>
+
+                            <div id="classification">
+                      <h3 style="color:white;" > CLASSIFICATION REPORT </h3>
+                          <br>
+                        <img class=" graphs"  src="/static/graphs/classification.png"  alt=""><br>
+                      </div>
+
+                    </div>
+
+                           <div id="visual">
+<!--                    <h1 class="second-h2">Visualization Graphs </h1><br>-->
+                      <img src="/static/graphs/visual.png" style="height:400px;margin-top:-10px;" class=" graphs" alt=""><br><br>
+
+
+                     </div>
+
+{% endblock %}

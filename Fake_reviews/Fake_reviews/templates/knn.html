@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+    {% block title %}|cnn-lstm  {% endblock %}
+
+{% block content %}
+
+  <div id="lstm">
+                          <button onclick="confusion()" class="lstm_button">Confusion matrix </button>
+                           <button onclick="classify()" class="lstm_button"> Classification report</button>
+                           <button onclick="visual()" class="lstm_button">Accuracy Comparison</button>
+                          <br><br>
+
+                          <div id="confusion">
+<!--                      <h1 class="second-h2" >CONFUSION MATRIX  FOR KNN MODEL</h1>-->
+                          <br>
+                               <img class=" graphs " style="height:420px;"  src="/static/graphs/knn_confusion_matrix.png"  alt="">
+                      </div>
+
+                            <div id="classification">
+                      <h4 class="" > CLASSIFICATION REPORT FOR RANDOM FOREST MODEL</h4>
+                          <br>
+                        <img class=" graphs"  src="/static/graphs/classificationreport_randomforest.png"  alt=""><br>
+                      </div>
+
+
+                           <div id="visual">
+<!--                    <h1 class="second-h2">Visualization Graphs </h1><br>-->
+                      <img src="/static/graphs/bar_graph.png" style="height:420px;" class=" graphs" alt=""><br><br>
+
+                     </div>
+  </div>
+
+{% endblock %}

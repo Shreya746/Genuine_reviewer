@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+
+    {% block title %}|Home  {% endblock %}
+
+{% block content %}
+<style>
+body{position:fixed;}
+p{color:white;}
+</style>
+                                      <!--     HOME      -->
+
+
+
+  <div id="home" ><br>
+           <form class="form-horizontal" style="margin-left:0%;" action="/upload" method="post" enctype="multipart/form-data">
+
+               <label class="control-label col-sm-2"><strong style="color:white;">Upload Validation File</strong></label><br>
+              <input type="file" style="width:30%;" class="form-control" required placeholder="Choose file.. "  name="file" id="audio"/><br>
+               <button style="width:100px;height:50px;margin-left:-60px;" type="submit" class="btn-success predict">Upload</button>
+
+           </form><br>
+
+            {% if msg %}
+            <p>{{ msg }}</p><br>
+            <p>Click on the following button to Predict the result...</p><br>
+             <form  action="/submit" method="post" >
+            <button style="width:100px;height:50px;margin-left:-60px;" type="submit" class="btn-success predict">Submit</button>
+             </form>
+             {% endif %}
+           </div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+

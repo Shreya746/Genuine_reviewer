@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+    {% block title %}|result  {% endblock %}
+
+{% block content %}
+
+<div style="background-color:gray;margin-left:10px;width:93%;">
+  <table class="table table-striped" style="text-align:center;justify-content:center;border:2px solid gray" >
+                <tr>
+                    {% for i in cols %}
+                    <th  >{{ i }}</th>
+                        {% endfor %}
+                </tr>
+
+
+       <tr>    {% for i in range(10) %}<td class="table-primary" >{{ df[0][i] }}</td> {% endfor %}<tr>
+       <tr>       {% for i in range(10) %}     <td class="table-primary" >{{ df[1][i] }}</td>{% endfor %}<tr>
+    <tr>{% for i in range(10) %}  <td class="table-primary" >{{ df[2][i] }}</td>{% endfor %}</tr>
+ <tr>{% for i in range(10) %}<td class="table-primary" >{{ df[3][i] }}</td>{% endfor %}</tr>
+ <tr>{% for i in range(10) %}<td class="table-primary" >{{ df[4][i] }}</td>{% endfor %}</tr>
+       <tr>{% for i in range(10) %}<td class="table-primary" >{{ df[5][i] }}</td>{% endfor %}</tr>
+      <tr>{% for i in range(10) %}<td class="table-primary" >{{ df[6][i] }}</td>{% endfor %}</tr>
+       <tr>{% for i in range(10) %}<td class="table-primary" >{{ df[7][i] }}</td>{% endfor %}</tr>
+ <tr>{% for i in range(10) %}<td class="table-primary" >{{ df[8][i] }}</td>{% endfor %}</tr>
+       <tr>{% for i in range(10) %}<td class="table-primary" >{{ df[9][i] }}</td>{% endfor %}</tr>
+
+            </table><br>
+
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}
